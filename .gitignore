@@ -1,0 +1,4 @@
+*.idx
+*.o
+*.pro.user
+*.pro.user.*
