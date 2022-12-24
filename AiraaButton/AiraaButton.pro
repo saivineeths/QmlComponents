@@ -33,3 +33,14 @@ unix {
 
 RESOURCES += \
     airaaButton.qrc
+
+DESTDIR = $$PWD/../../builds/$${BUILD_NAME}/$${TARGET}
+OBJECTS_DIR = $${DESTDIR}/../.objects
+MOC_DIR = $${DESTDIR}/../.moc
+RCC_DIR = $${DESTDIR}/../.rcc
+UI_DIR = $${DESTDIR}/../.ui
+
+# Copy the qmldir file to the same folder as the plugin binary
+cpqmldir.files = qmldir
+cpqmldir.path = $$DESTDIR
+COPIES += cpqmldir
