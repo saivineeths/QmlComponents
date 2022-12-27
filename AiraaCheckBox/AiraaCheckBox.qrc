@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>AiraaCheckBox.qml</file>
+    </qresource>
+</RCC>

@@ -1,3 +1,6 @@
 TEMPLATE = subdirs
-SUBDIRS += AiraaButton
-SUBDIRS += AiraaButtonTestApplication
+SUBDIRS += AiraaButton \
+           AiraaCheckBox
+
+SUBDIRS += AiraaButtonTestApplication \
+           AiraaCheckBoxTestApplication
