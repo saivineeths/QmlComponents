@@ -1,5 +1,5 @@
 TEMPLATE = lib
-TARGET = AiraaButton
+TARGET = AiraaCheckBox
 QT += qml quick
 CONFIG += plugin c++11
 
@@ -8,10 +8,10 @@ uri = com.mycompany.qmlcomponents
 
 # Input
 SOURCES += \
-        airaabutton_plugin.cpp
+        airaacheckbox_plugin.cpp
 
 HEADERS += \
-        airaabutton_plugin.h
+        airaacheckbox_plugin.h
 
 DISTFILES = qmldir
 
@@ -32,7 +32,7 @@ unix {
 }
 
 RESOURCES += \
-    airaaButton.qrc
+    AiraaCheckBox.qrc
 
 DESTDIR = $$PWD/../../builds/$${BUILD_NAME}/$${TARGET}
 OBJECTS_DIR = $${DESTDIR}/../.objects
