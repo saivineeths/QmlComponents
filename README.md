@@ -1,7 +1,5 @@
 # QmlComponents
 
-# LearnGitHub
-
 # Creating Documentation for Custom Components - Sibi Nikesh
 
 **[QDOC](https://doc.qt.io/qt-6/01-qdoc-manual.html)** is a tool used to generate documentation for software projects. It works by extracting QDoc comments from project source files and then formatting these comments as HTML pages or DocBook XML documents.
