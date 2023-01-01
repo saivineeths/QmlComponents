@@ -7,8 +7,17 @@ Window {
     height: 480
     visible: true
     title: qsTr("Hello World")
+    Row{
+        ButtonBase{
 
-    ButtonBase{
+        }
+        TextButton{
+            buttonText: "Airaa"
+        }
+        TextIcon{
 
+        }
     }
+
+
 }

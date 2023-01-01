@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
+    engine.addImportPath("C:\\Users\\hp\\Documents\\Git_Airaa_Builds\\build-AiraaButton-Desktop_Qt_5_15_2_MinGW_64_bit-Debug\\debug\\AiraaButton");
     engine.load(url);
 
     return app.exec();

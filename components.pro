@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
+
 SUBDIRS += AiraaButton \
            AiraaCheckBox\
            Airaa_Switch\
