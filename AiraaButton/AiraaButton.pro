@@ -47,13 +47,13 @@ COPIES += cpqmldir
 
 #Custom Target to run commands to create the documentation file
 
-myqhpTarget.target = $${TARGET}.qhp
-myqhpTarget.commands = C:/Qt/6.3.2/mingw_64/bin/qdoc $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf -outputdir $$DESTDIR/doc/
-myqhpTarget.depends = $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf
+qhpTarget.target = $${TARGET}.qhp
+qhpTarget.commands = C:/Qt/6.3.2/mingw_64/bin/qdoc $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf -outputdir $$DESTDIR/doc/
+qhpTarget.depends = $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf
 
-myqchTarget.target = $${TARGET}.qch
-myqchTarget.commands = qhelpgenerator $$DESTDIR/doc/$${TARGET}.qhp -o $$DESTDIR/doc/$${TARGET}.qch
-myqchTarget.depends = myqhpTarget
+qchTarget.target = $${TARGET}.qch
+qchTarget.commands = qhelpgenerator $$DESTDIR/doc/$${TARGET}.qhp -o $$DESTDIR/doc/$${TARGET}.qch
+qchTarget.depends = qhpTarget
 
-QMAKE_EXTRA_TARGETS += myqhpTarget myqchTarget
+QMAKE_EXTRA_TARGETS += qhpTarget qchTarget
 PRE_TARGETDEPS += $${TARGET}.qhp $${TARGET}.qch
