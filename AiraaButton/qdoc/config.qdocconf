@@ -1,0 +1,9 @@
+QT_VERSION = 6.3.2
+QT_VER = 6.3.2
+QT_VERSION_TAG = 6.3.2
+
+moduleheader = ""
+		
+sources.fileextensions += "*.cpp *.qml"
+
+headers.fileextensions += "*.h *.hpp"

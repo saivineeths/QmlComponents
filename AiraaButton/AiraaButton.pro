@@ -44,3 +44,16 @@ UI_DIR = $${DESTDIR}/../.ui
 cpqmldir.files = qmldir
 cpqmldir.path = $$DESTDIR
 COPIES += cpqmldir
+
+#Custom Target to run commands to create the documentation file
+
+myqhpTarget.target = AiraaButton.qhp
+myqhpTarget.commands = C:/Qt/6.3.2/mingw_64/bin/qdoc $$PWD/../../QmlComponents/$${TARGET}/qdoc/AiraaButton.qdocconf -outputdir $$DESTDIR/doc/
+myqhpTarget.depends = $$PWD/../../QmlComponents/$${TARGET}/qdoc/AiraaButton.qdocconf
+
+myqchTarget.target = AiraaButton.qch
+myqchTarget.commands = qhelpgenerator $$DESTDIR/doc/AiraaButton.qhp -o $$DESTDIR/doc/AiraaButton.qch
+myqchTarget.depends = myqhpTarget
+
+QMAKE_EXTRA_TARGETS += myqhpTarget myqchTarget
+PRE_TARGETDEPS += AiraaButton.qhp AiraaButton.qch
