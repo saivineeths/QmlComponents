@@ -14,7 +14,7 @@
       
       Once the qdocconf file is created it has to be placed inside the directory "qdoc" inside the project folder.
       
-      **Note:** *"config.qdocconf," located in the qdoc directory, contains the static commands that make up a qdocconf file. Rename the file with project name to your project name after copying the qdoc directory to your project. Change the commands in the project file so that they correspond to your project.*
+        **Note:** *"config.qdocconf," located in the qdoc directory, contains the static commands that make up a qdocconf file. Rename the file with project name to your project name after copying the qdoc directory to your project. Change the commands in the project file so that they correspond to your project.*
       
   - **Step 3 - <ins>Running commands for the generation of Documentation files.</ins>**
 
@@ -23,7 +23,7 @@
       
       To produce the documentation files, use the command below to launch the Qdoc tool and pass the qdocconf file. ($${TARGET} =  Project Name)
       
-        $$[QT_INSTALL_QML]/../bin/qdoc ./$${TARGET}.qdocconf.
+        $$[QT_INSTALL_QML]/../bin/qdoc ./qdoc/$${TARGET}.qdocconf.
       
   - **Step 4 - <ins>Generating QT Compressed help file to integrate documentation files with Qt creator.</ins>**
       
