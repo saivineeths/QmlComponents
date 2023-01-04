@@ -47,13 +47,13 @@ COPIES += cpqmldir
 
 #Custom Target to run commands to create the documentation file
 
-myqhpTarget.target = AiraaButton.qhp
-myqhpTarget.commands = C:/Qt/6.3.2/mingw_64/bin/qdoc $$PWD/../../QmlComponents/$${TARGET}/qdoc/AiraaButton.qdocconf -outputdir $$DESTDIR/doc/
-myqhpTarget.depends = $$PWD/../../QmlComponents/$${TARGET}/qdoc/AiraaButton.qdocconf
+myqhpTarget.target = $${TARGET}.qhp
+myqhpTarget.commands = C:/Qt/6.3.2/mingw_64/bin/qdoc $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf -outputdir $$DESTDIR/doc/
+myqhpTarget.depends = $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf
 
-myqchTarget.target = AiraaButton.qch
-myqchTarget.commands = qhelpgenerator $$DESTDIR/doc/AiraaButton.qhp -o $$DESTDIR/doc/AiraaButton.qch
+myqchTarget.target = $${TARGET}.qch
+myqchTarget.commands = qhelpgenerator $$DESTDIR/doc/$${TARGET}.qhp -o $$DESTDIR/doc/$${TARGET}.qch
 myqchTarget.depends = myqhpTarget
 
 QMAKE_EXTRA_TARGETS += myqhpTarget myqchTarget
-PRE_TARGETDEPS += AiraaButton.qhp AiraaButton.qch
+PRE_TARGETDEPS += $${TARGET}.qhp $${TARGET}.qch
