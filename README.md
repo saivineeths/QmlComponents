@@ -51,6 +51,6 @@
   2. Change AiraaButton.qdocconf file name inside the doc directory to the name of your project.
   3. There will be a variable called "PROJECT_NAME" inside the file. You must set your project name as its value.
   4. Under QHP Files Commands there will be prefix "qhp.AiraaButton." (line no: 18 - 34), wherein "AiraaButton" should be changed to your project name.
-  5. Copy the commands from AiraaButton.pro for creating Documentation files (line no: 48 - 59) to your .pro file.
+  5. Copy the commands from AiraaButton.pro for creating Documentation files to your .pro file.
   6. Build the project. The Documentation files will be generated in ```QmlComponents -> Builds -> Debug -> Project Name -> Doc``` 
   
