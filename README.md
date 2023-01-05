@@ -42,6 +42,8 @@
       Navigate to the below settings to add the file.
       
           QT Creator -> Edit -> Preferences -> Help -> Documentation -> Add the generated .qch file.
-          
+
+# How to Edit .qdocconf file present in qdoc directory in AiraaButton Project
+
       ```Note: "config.qdocconf," located in "QmlComponents" directory, contains the static commands that make up a qdocconf file. Rename the file with project name to your project name after copying the "qdoc" directory from "AiraaButton Project" to your project. Change the commands in the project file so that they correspond to your project.```
       
