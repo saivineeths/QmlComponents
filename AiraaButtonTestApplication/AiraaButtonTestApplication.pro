@@ -9,7 +9,12 @@ SOURCES += \
 
 RESOURCES += qml.qrc
 
+<<<<<<< HEAD
 
+=======
+# Additional import path used to resolve QML modules in Qt Creator's code model
+QML_IMPORT_PATH =
+>>>>>>> 8912fca9ad35b5adf7b758ea23ae643f2a44a48a
 
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
