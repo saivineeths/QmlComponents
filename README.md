@@ -43,7 +43,14 @@
       
           QT Creator -> Edit -> Preferences -> Help -> Documentation -> Add the generated .qch file.
 
-# How to Edit .qdocconf file present in qdoc directory in AiraaButton Project
+## **How to Edit .qdocconf file present in qdoc directory in AiraaButton Project**
 
-      ```Note: "config.qdocconf," located in "QmlComponents" directory, contains the static commands that make up a qdocconf file. Rename the file with project name to your project name after copying the "qdoc" directory from "AiraaButton Project" to your project. Change the commands in the project file so that they correspond to your project.```
-      
+ > "config.qdocconf" located in "QmlComponents" directory, contains the static commands that make up a qdocconf file. 
+ 
+  1. Copy the doc directory from AiraaButton Project to your Project folder.
+  2. Change AiraaButton.qdocconf file name inside the doc directory to the name of your project.
+  3. There will be a variable called "PROJECT_NAME" inside the file. You must set your project name as its value.
+  4. Under QHP Files Commands there will be prefix "qhp.AiraaButton." (line no: 18 - 34), wherein "AiraaButton" should be changed to your project name.
+  5. Copy the commands from AiraaButton.pro for creating Documentation files (line no: 48 - 59) to your .pro file.
+  6. Build the project. The Documentation files will be generated in ```QmlComponents -> Builds -> Debug -> Project Name -> Doc``` 
+  
