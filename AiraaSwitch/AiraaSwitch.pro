@@ -1,5 +1,5 @@
 TEMPLATE = lib
-TARGET = Airaa_Switch
+TARGET = AiraaSwitch
 QT += qml quick
 CONFIG += plugin c++11
 
@@ -8,10 +8,10 @@ uri = com.mycompany.qmlcomponents
 
 # Input
 SOURCES += \
-        airaa_switch_plugin.cpp
+        AiraaSwitch_plugin.cpp
 
 HEADERS += \
-        airaa_switch_plugin.h
+        AiraaSwitch_plugin.h
 
 DISTFILES = qmldir
 
@@ -32,14 +32,15 @@ unix {
 }
 
 RESOURCES += \
-    Airaa_Switch.qrc
-    DESTDIR = $$PWD/../../builds/$${BUILD_NAME}/$${TARGET}
-    OBJECTS_DIR = $${DESTDIR}/../.objects
-    MOC_DIR = $${DESTDIR}/../.moc
-    RCC_DIR = $${DESTDIR}/../.rcc
-    UI_DIR = $${DESTDIR}/../.ui
+    AiraaSwitch.qrc
 
-    # Copy the qmldir file to the same folder as the plugin binary
-    cpqmldir.files = qmldir
-    cpqmldir.path = $$DESTDIR
-    COPIES += cpqmldir
+DESTDIR = $$PWD/../../builds/$${BUILD_NAME}/$${TARGET}
+OBJECTS_DIR = $${DESTDIR}/../.objects
+MOC_DIR = $${DESTDIR}/../.moc
+RCC_DIR = $${DESTDIR}/../.rcc
+UI_DIR = $${DESTDIR}/../.ui
+
+# Copy the qmldir file to the same folder as the plugin binary
+cpqmldir.files = qmldir
+cpqmldir.path = $$DESTDIR
+COPIES += cpqmldir
