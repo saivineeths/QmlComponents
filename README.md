@@ -13,9 +13,7 @@
       [QDoc Configuration file](https://doc.qt.io/qt-6/21-0-qdoc-configuration.html) is to tell QDoc where to find the source files that contain the QDoc comments. An example of qdocconf file can be found in [minimum.qdocconf](https://doc.qt.io/qt-6/21-1-minimum-qdocconf.html).
       
       Once the qdocconf file is created it has to be placed inside the directory "qdoc" inside the project folder.
-      
-       ```Note: "config.qdocconf," located in the qdoc directory, contains the static commands that make up a qdocconf file. Rename the file with project name to your project name after copying the qdoc directory to your project. Change the commands in the project file so that they correspond to your project.```
-      
+   
   - **Step 3 - <ins>Running commands for the generation of Documentation files.</ins>**
 
       The pathname to your configuration file is passed to QDoc tool. QDoc tool can be found in the installation directory of QT in your local computer.
@@ -44,4 +42,6 @@
       Navigate to the below settings to add the file.
       
           QT Creator -> Edit -> Preferences -> Help -> Documentation -> Add the generated .qch file.
+          
+      ```Note: "config.qdocconf," located in "QmlComponents" directory, contains the static commands that make up a qdocconf file. Rename the file with project name to your project name after copying the "qdoc" directory from "AiraaButton Project" to your project. Change the commands in the project file so that they correspond to your project.```
       
