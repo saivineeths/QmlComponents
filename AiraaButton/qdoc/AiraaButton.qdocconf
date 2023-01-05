@@ -1,32 +1,34 @@
 #including config.qdocconf for static code
 include(../../config.qdocconf)
 
-project = AiraaButton
+PROJECT_NAME = AiraaButton
 
-description = Airaa Button Documentation
+#HTML Documentation Files Creation Commands
 
-navigation.hometitle = "Airaa Button 1.0"
+project 		 = $$PROJECT_NAME
+description 		 = $$PROJECT_NAME Documentation
+navigation.hometitle 	 = "$$PROJECT_NAME 1.0"
+sourcedirs 		+= ../../$$PROJECT_NAME/
+headerdirs 		+= ../../$$PROJECT_NAME/
 
-sourcedirs += ../../AiraaButton/
+#QHP File Creation Commands
 
-headerdirs += ../../AiraaButton/
+qhp.projects = $$PROJECT_NAME
 
-qhp.projects = AiraaButton
+qhp.AiraaButton.file          = $$PROJECT_NAME.qhp
+qhp.AiraaButton.namespace     = org.$$PROJECT_NAME.controls.1
+qhp.AiraaButton.indexTitle    = $$PROJECT_NAME
+qhp.AiraaButton.virtualFolder = $$PROJECT_NAME
 
-qhp.AiraaButton.file          = AiraaButton.qhp
-qhp.AiraaButton.namespace     = org.AiraaButton.controls.1
-qhp.AiraaButton.indexTitle    = Airaa Button
-qhp.AiraaButton.virtualFolder       = airaabutton
+qhp.AiraaButton.subprojects   = qmltypes classes
 
-qhp.AiraaButton.subprojects         = qmltypes classes
+qhp.AiraaButton.subprojects.qmltypes.title 	= QML Types
+qhp.AiraaButton.subprojects.qmltypes.indexTitle =$$PROJECT_NAME QML Types
+qhp.AiraaButton.subprojects.qmltypes.selectors  = qmlclass
+qhp.AiraaButton.subprojects.qmltypes.sortPages  = true
 
-qhp.AiraaButton.subprojects.qmltypes.title = QML Types
-qhp.AiraaButton.subprojects.qmltypes.indexTitle =Airaa Button QML Types
-qhp.AiraaButton.subprojects.qmltypes.selectors = qmlclass
-qhp.AiraaButton.subprojects.qmltypes.sortPages = true
-
-qhp.AiraaButton.subprojects.classes.title = Classes
-qhp.AiraaButton.subprojects.classes.title = C++ Classes
-qhp.AiraaButton.subprojects.classes.indexTitle = Airaa button C++ Classes
-qhp.AiraaButton.subprojects.classes.selectors = class fake:headerfile
-qhp.AiraaButton.subprojects.classes.sortPages = true
+qhp.AiraaButton.subprojects.classes.title 	= Classes
+qhp.AiraaButton.subprojects.classes.title 	= C++ Classes
+qhp.AiraaButton.subprojects.classes.indexTitle  = $$PROJECT_NAME C++ Classes
+qhp.AiraaButton.subprojects.classes.selectors   = class fake:headerfile
+qhp.AiraaButton.subprojects.classes.sortPages   = true
