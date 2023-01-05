@@ -48,8 +48,8 @@ COPIES += cpqmldir
 #Custom Target to run commands to create the documentation file
 
 qhpTarget.target = $${TARGET}.qhp
-qhpTarget.commands = $$[QT_INSTALL_QML]/../bin/qdoc $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf -outputdir $$DESTDIR/doc/
-qhpTarget.depends = $$PWD/../../QmlComponents/$${TARGET}/qdoc/$${TARGET}.qdocconf
+qhpTarget.commands = $$[QT_INSTALL_QML]/../bin/qdoc $$PWD/../$${TARGET}/qdoc/$${TARGET}.qdocconf -outputdir $$DESTDIR/doc/
+qhpTarget.depends = $$PWD/../$${TARGET}/qdoc/$${TARGET}.qdocconf
 
 qchTarget.target = $${TARGET}.qch
 qchTarget.commands = qhelpgenerator $$DESTDIR/doc/$${TARGET}.qhp -o $$DESTDIR/doc/$${TARGET}.qch

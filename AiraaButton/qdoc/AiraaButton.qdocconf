@@ -1,5 +1,5 @@
 #including config.qdocconf for static code
-include(config.qdocconf)
+include(../../config.qdocconf)
 
 project = AiraaButton
 
