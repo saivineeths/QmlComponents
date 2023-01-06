@@ -1,0 +1,34 @@
+#including config.qdocconf for static code
+include(../../config.qdocconf)
+
+#PROJECT_NAME = AiraaCheckBox
+
+#HTML Documentation Files Creation Commands
+
+project 		 = AiraaCheckBox
+description 		 = AiraaCheckBox Documentation
+navigation.hometitle 	 = "AiraaCheckBox1.0"
+sourcedirs 		+= ../../AiraaCheckBox/
+headerdirs 		+= ../../AiraaCheckBox/
+
+#QHP File Creation Commands
+
+qhp.projects = AiraaCheckBox
+
+qhp.AiraaCheckBox.file          = AiraaCheckBox.qhp
+qhp.AiraaCheckBox.namespace     = org.AiraaCheckBox.controls.1
+qhp.AiraaCheckBox.indexTitle    = AiraaCheckBox
+qhp.AiraaCheckBox.virtualFolder = AiraaCheckBox
+
+qhp.AiraaCheckBox.subprojects   = qmltypes classes
+
+qhp.AiraaCheckBox.subprojects.qmltypes.title 	= QML Types
+qhp.AiraaCheckBox.subprojects.qmltypes.indexTitle = AiraaCheckBoxTypes
+qhp.AiraaCheckBox.subprojects.qmltypes.selectors  = qmlclass
+qhp.AiraaCheckBox.subprojects.qmltypes.sortPages  = true
+
+qhp.AiraaCheckBox.subprojects.classes.title 	= Classes
+qhp.AiraaCheckBox.subprojects.classes.title 	= C++ Classes
+qhp.AiraaCheckBox.subprojects.classes.indexTitle  = AiraaCheckBox C++ Classes
+qhp.AiraaCheckBox.subprojects.classes.selectors   = class fake:headerfile
+qhp.AiraaCheckBox.subprojects.classes.sortPages   = true

@@ -1,0 +1,34 @@
+#including config.qdocconf for static code
+include(../../config.qdocconf)
+
+#PROJECT_NAME = AiraaRadioButton
+
+#HTML Documentation Files Creation Commands
+
+project 		 = AiraaRadioButton
+description 		 = AiraaRadioButton Documentation
+navigation.hometitle 	 = "AiraaRadioButton1.0"
+sourcedirs 		+= ../../AiraaRadioButton/
+headerdirs 		+= ../../AiraaRadioButton/
+
+#QHP File Creation Commands
+
+qhp.projects = AiraaRadioButton
+
+qhp.AiraaRadioButton.file          = AiraaRadioButton.qhp
+qhp.AiraaRadioButton.namespace     = org.AiraaRadioButton.controls.1
+qhp.AiraaRadioButton.indexTitle    = AiraaRadioButton
+qhp.AiraaRadioButton.virtualFolder = AiraaRadioButton
+
+qhp.AiraaRadioButton.subprojects   = qmltypes classes
+
+qhp.AiraaRadioButton.subprojects.qmltypes.title 	= QML Types
+qhp.AiraaRadioButton.subprojects.qmltypes.indexTitle = AiraaRadioButtonTypes
+qhp.AiraaRadioButton.subprojects.qmltypes.selectors  = qmlclass
+qhp.AiraaRadioButton.subprojects.qmltypes.sortPages  = true
+
+qhp.AiraaRadioButton.subprojects.classes.title 	= Classes
+qhp.AiraaRadioButton.subprojects.classes.title 	= C++ Classes
+qhp.AiraaRadioButton.subprojects.classes.indexTitle  = AiraaRadioButton C++ Classes
+qhp.AiraaRadioButton.subprojects.classes.selectors   = class fake:headerfile
+qhp.AiraaRadioButton.subprojects.classes.sortPages   = true
