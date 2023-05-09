@@ -113,6 +113,7 @@
 
 -	Copy and paste the folder containing .SO and qmldir to the build folder of the test application.
 -	import the library using the module name give in the qmldir file.
+
 	>	 Example: import CustomButton 1.0.
 - Create an object of the Custom Component in the main.qml
 - Run the application. 
