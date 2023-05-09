@@ -1,4 +1,4 @@
-# QmlComponents
+# QmlCustomComponents
 
 # Creating Documentation for Custom Components - Sibi Nikesh
 
@@ -53,4 +53,5 @@
   4. Under QHP Files Commands there will be prefix "qhp.AiraaButton." (line no: 18 - 34), wherein "AiraaButton" should be changed to your project name.
   5. Copy the commands from AiraaButton.pro for creating Documentation files to your .pro file.
   6. Build the project. The Documentation files will be generated in ```QmlComponents -> Builds -> Debug -> Project Name -> Doc``` 
-  
+
+# Creating and adding library of the Custom Components to test application- Sibi Nikesh
