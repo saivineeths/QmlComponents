@@ -1,5 +1,72 @@
 
+
 # QmlCustomComponents
+
+> Create a Custom Component in Qt Quick Application based on the requirement. [Customize Qt Quick Controls](https://doc.qt.io/qt-6/qtquickcontrols-customize.html) you can use this link to learn about the visual items which can be used to customize a component.
+
+## Creating and adding library of the Custom Components to test application.
+
+### Step 1: Create Plugin Project
+
+	          File -> New Project -> Library(Template) -> Qt Quick 2 Extension Plugin
+
+ - Choose "qmake" as the build system and select Minimum required Qt Version "Qt 5.15"
+
+### Step 2: Edit Project File(.pro)
+
+- Remove **myitem.ccp** from SOURCES and **myitem.h** from HEADERS. Click on Save.
+
+		    SOURCES += \
+	        untitled_plugin.cpp \
+	        myitem.cpp
+	        HEADERS += \
+	        untitled_plugin.h \
+	        myitem.h 				
+
+- Delete the same files from the project folder using File Explorer.
+
+### Step 3: Add Resource File and QML file.
+
+-  **Add Resource File**
+	- Right click on the project and select "Add New"
+	- Under Qt Template, Select **Qt Resource File**
+	- File Name as **qml**
+	
+- **Add QML File to the Resource File**
+	- Right click on the Resource file and Click on "Add New".
+	- Under Qt Template, select **QML File(Qt Quick 2)**.
+	- Create the file name same as the Project Name.
+		- Add the Custom Component Code in the the QML File 
+			> *Copy the code from the Qt Quick Application Earlier*.
+		- Edit the qml dir file (under Other files) as follows:
+			- module CustomButton.
+			- plugin CustomButton
+>	*Both Plugin and Module name should be same as the Project Name.*
+
+### Step 4: Edit plugin.cpp file to register QML type.
+- Edit the exisiting QmlRegistertype as follows: **qmlRegisterType<MyItem>(uri, 1, 0, "MyItem");**
+
+				qmlRegisterType(QUrl("qrc:/CustomButton.qml"),uri, 1, 0, "CustomButton");
+
+### Step 5: Build the Project to generate .SO file and qmldir
+
+ -	Right Click on the Project, Click on **Run qmake.**
+ -	Right Click on the project, Click on **Build**.
+
+### Step 6: Copy .SO and qmldir file from Build folder.
+
+- Copy both .SO and qmldir file from the build folder and place it inside a folder with the same name as the project name.
+
+### Step 7: Using this Library in the test application.
+
+-	Copy and paste the folder containing .SO and qmldir to the build folder of the test application.
+-	import the library using the module name give in the qmldir file.
+
+	>	 Example: import CustomButton 1.0.
+- Create an object of the Custom Component in the main.qml
+- Run the application. 
+
+#
 
 ## Creating Documentation for Custom Components 
 
@@ -54,68 +121,5 @@
   4. Under QHP Files Commands there will be prefix "qhp.AiraaButton." (line no: 18 - 34), wherein "AiraaButton" should be changed to your project name.
   5. Copy the commands from AiraaButton.pro for creating Documentation files to your .pro file.
   6. Build the project. The Documentation files will be generated in ```QmlComponents -> Builds -> Debug -> Project Name -> Doc``` 
-
-#
-
-## Creating and adding library of the Custom Components to test application.
-
-### Step 1: Create Plugin Project
-
-	          File -> New Project -> Library(Template) -> Qt Quick 2 Extension Plugin
-
- - Choose "qmake" as the build system and select Minimum required Qt Version "Qt 5.15"
-
-### Step 2: Edit Project File(.pro)
-
-- Remove **myitem.ccp** from SOURCES and **myitem.h** from HEADERS. Click on Save.
-
-		    SOURCES += \
-	        untitled_plugin.cpp \
-	        myitem.cpp
-	        HEADERS += \
-	        untitled_plugin.h \
-	        myitem.h 				
-
-- Delete the same files from the project folder using File Explorer.
-
-### Step 3: Add Resource File and QML file.
-
--  **Add Resource File**
-	- Right click on the project and select "Add New"
-	- Under Qt Template, Select **Qt Resource File**
-	- File Name as **qml**
-	
-- **Add QML File to the Resource File**
-	- Right click on the Resource file and Click on "Add New".
-	- Under Qt Template, select **QML File(Qt Quick 2)**.
-	- Create the file name same as the Project Name.
-		- Add the Custom Component Code in the the QML File.
-		- Edit the qml dir file (under Other files) as follows:
-			- module CustomButton.
-			- plugin CustomButton
->	*Both Plugin and Module name should be same as the Project Name.*
-
-### Step 4: Edit plugin.cpp file to register QML type.
-- Edit the exisiting QmlRegistertype as follows: **qmlRegisterType<MyItem>(uri, 1, 0, "MyItem");**
-
-				qmlRegisterType(QUrl("qrc:/CustomButton.qml"),uri, 1, 0, "CustomButton");
-
-### Step 5: Build the Project to generate .SO file and qmldir
-
- -	Right Click on the Project, Click on **Run qmake.**
- -	Right Click on the project, Click on **Build**.
-
-### Step 6: Copy .SO and qmldir file from Build folder.
-
-- Copy both .SO and qmldir file from the build folder and place it inside a folder with the same name as the project name.
-
-### Step 7: Using this Library in the test application.
-
--	Copy and paste the folder containing .SO and qmldir to the build folder of the test application.
--	import the library using the module name give in the qmldir file.
-
-	>	 Example: import CustomButton 1.0.
-- Create an object of the Custom Component in the main.qml
-- Run the application. 
 
 #
